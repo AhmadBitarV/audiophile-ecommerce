@@ -1,0 +1,37 @@
+@import '../../../variables';
+
+.earphones {
+    grid-column: col-start 1 / col-end 8;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
+    grid-gap: 1.875rem;
+
+    @media only screen and (max-width: 43.75em) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    &__details {
+        background-color: var(--color-grey);
+
+        & > * {
+            margin-left: calc(var(--horizontal-spacer) * 0.5);
+        }
+    }
+
+    &__image {
+        background-image: url(../../../assets/home/desktop/image-earphones-yx1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media only screen and (max-width: $bp-big) {
+            background-image: url(../../../assets/home/tablet/image-earphones-yx1.jpg);
+        }
+
+        @media only screen and (max-width: 43.75em) {
+            background-image: url(../../../assets/home/mobile/image-earphones-yx1.jpg);
+        }
+    }
+}

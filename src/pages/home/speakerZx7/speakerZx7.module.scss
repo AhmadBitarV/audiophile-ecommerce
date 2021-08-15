@@ -1,0 +1,41 @@
+@import '../../../variables';
+
+.speakerZx7 {
+    grid-column: col-start 1 / col-end 8;
+    background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.3)
+        ),
+        url(../../../assets/home/desktop/image-speaker-zx7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media only screen and (max-width: $bp-big) {
+        background: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+            ),
+            url(../../../assets/home/tablet/image-speaker-zx7.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        background: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.1),
+                rgba(0, 0, 0, 0.3)
+            ),
+            url(../../../assets/home/mobile/image-speaker-zx7.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__details {
+        margin: auto var(--horizontal-spacer);
+    }
+}

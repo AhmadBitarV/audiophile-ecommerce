@@ -1,0 +1,100 @@
+@import '../../variables';
+
+.footer {
+    grid-column: outline-start / outline-end;
+    background-color: var(--color-black);
+
+    @media only screen and (max-width: $bp-small) {
+        text-align: center;
+    }
+
+    &__content {
+        margin: auto var(--horizontal-spacer);
+        display: grid;
+        grid-template-rows: repeat(3, min-content);
+        grid-gap: 2rem;
+        padding: 4.6875rem 0;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 0;
+            padding-bottom: 2.375rem;
+        }
+    }
+
+    &__navigation {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        justify-content: center;
+
+        & > :nth-child(2) {
+            justify-self: flex-end;
+
+            @media only screen and (max-width: $bp-big) {
+                justify-self: flex-start;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                justify-self: center;
+            }
+        }
+
+        @media only screen and (max-width: $bp-big) {
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            gap: 0;
+            & > :first-child {
+                margin: auto;
+            }
+        }
+    }
+
+    &__aboutUs {
+        max-width: 45%;
+
+        @media only screen and (max-width: $bp-big) {
+            max-width: 100%;
+        }
+    }
+
+    &__legal {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
+
+    &__social_media {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $bp-small) {
+            justify-content: center;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__icon {
+        height: 1.5rem;
+        width: 1.5rem;
+
+        &:hover {
+            filter: invert(52%) sepia(59%) saturate(452%) hue-rotate(337deg)
+                brightness(95%) contrast(96%);
+        }
+    }
+}

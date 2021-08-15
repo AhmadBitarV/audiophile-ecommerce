@@ -1,0 +1,13 @@
+@import '../../../variables';
+
+.Logo {
+    height: 1.5625rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-right: auto;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+    }
+}

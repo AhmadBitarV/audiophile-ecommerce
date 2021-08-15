@@ -1,0 +1,24 @@
+@import '../../../variables';
+
+.cart {
+    height: 100%;
+    margin-left: 7.5rem;
+
+    @media only screen and (max-width: $bp-large) {
+        margin-left: 0;
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: var(--color-white-700);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 0;
+    transition: all 0.2s;
+    font-size: 0.75rem;
+
+    &:hover {
+        color: var(--color-orange-light);
+    }
+}

@@ -1,0 +1,68 @@
+@import '../../../variables';
+
+.hero {
+    min-height: 100vh;
+    grid-column: outline-start / outline-end;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 5rem;
+
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)
+        ),
+        url(../../../assets/home/desktop/image-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+        background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+            ),
+            url(../../../assets/home/tablet/image-header.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+            ),
+            url(../../../assets/home/mobile/image-header.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    &__content {
+        max-width: 24.875rem;
+        margin: auto var(--horizontal-spacer);
+        color: white;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        @media only screen and (max-width: $bp-medium) {
+            text-align: center;
+            margin: 0;
+            margin: auto;
+            padding: 0 3rem;
+            align-items: center;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 0;
+        }
+    }
+}

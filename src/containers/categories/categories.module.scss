@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.Categories {
+    grid-column: col-start 1 / col-end 8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+    margin: 7.5rem 0;
+
+    @media only screen and (max-width: $bp-large) {
+        margin: 6rem 0;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        gap: 0.625rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 4.25rem;
+    }
+}

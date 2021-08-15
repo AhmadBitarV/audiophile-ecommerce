@@ -1,0 +1,76 @@
+@import '../../../variables';
+
+.speakerZx9 {
+    grid-column: col-start 1 / col-end 8;
+    margin: 3rem 0;
+    height: 35rem;
+    border-radius: 8px;
+
+    background: var(--color-orange-dark);
+    background-image: url(../../../assets/home/desktop/pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 55rem;
+    background-position-x: -10rem;
+    background-position-y: -2.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-large) {
+        background-size: 50rem;
+        background-position-x: -10rem;
+    }
+
+    @media only screen and (max-width: $bp-big) {
+        min-height: 45rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+
+        background-position-x: center;
+        background-position-y: -12.5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        min-height: 37.5rem;
+        background-size: 36rem;
+        background-position: center;
+        background-position-y: -7rem;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        max-width: 21.8125rem;
+
+        @media only screen and (max-width: $bp-big) {
+            align-items: center;
+            gap: 1.5rem;
+            padding-bottom: 4rem;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__image {
+        max-width: 29rem;
+        max-height: 27.8125rem;
+        transform: translateY(10px);
+
+        align-self: flex-end;
+
+        @media only screen and (max-width: $bp-big) {
+            max-height: 14.8125rem;
+            align-self: center;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            max-height: 12.9375rem;
+        }
+    }
+}

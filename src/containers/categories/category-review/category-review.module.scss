@@ -1,0 +1,21 @@
+@import '../../../variables';
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9375rem;
+    padding: 2em 1em;
+    border-radius: 8px;
+    background-color: var(--color-grey);
+
+    &__image {
+        max-height: 5rem;
+        transform: translateY(-55%) scale(2.5);
+
+        @media only screen and (max-width: $bp-medium) {
+            max-height: 4rem;
+        }
+    }
+}

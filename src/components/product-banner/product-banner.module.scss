@@ -1,0 +1,25 @@
+@import '../../variables';
+
+.banner {
+    grid-column: col-start 1 / col-end 8;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 4rem;
+    margin-top: 10rem;
+
+    @media only screen and (max-width: $bp-big) {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    &__image {
+        max-width: 100%;
+        border-radius: 8px;
+        align-self: center;
+    }
+
+    &__content {
+        max-width: 20.8125rem;
+    }
+}
