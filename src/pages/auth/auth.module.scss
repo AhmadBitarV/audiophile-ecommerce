@@ -22,9 +22,10 @@
         @media only screen and (max-width: $bp-big) {
             grid-column: 1 / -1;
             grid-row: 1 / -1;
-            padding: 2rem;
+            padding: 1rem 2rem;
             background-color: var(--color-white-400);
             border-radius: 8px;
+            gap: 1.75rem;
         }
 
         @media only screen and (max-width: $bp-small) {
@@ -41,6 +42,7 @@
         @media only screen and (max-width: 62.5rem) {
             grid-column: 1 / -1;
             grid-row: 1 / -1;
+            filter: brightness(75%);
         }
     }
 
@@ -107,6 +109,11 @@
     font-weight: var(--font-regular);
     min-height: 2rem;
     max-width: 25rem;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
 }
 
 .red {
@@ -117,6 +124,6 @@
 .logo {
     filter: brightness(0);
     align-self: center;
-    height: 3rem;
-    margin: 2rem 0;
+    height: 2rem;
+    margin: 1rem 0;
 }

@@ -80,7 +80,7 @@ const Auth = () => {
         }
 
         if (username.trim().length < 6 || password.trim().length < 6) {
-            setParagraph('Both fields must have at least 6 characters...');
+            setParagraph('Both fields must have at least 6 characters');
         }
     };
 
@@ -88,7 +88,7 @@ const Auth = () => {
         <div className={styles.auth}>
             <div className={styles.auth__content}>
                 <Logo classname={styles.logo} />
-                <Fonts elementType="h3">Start your free trial</Fonts>
+                <Fonts elementType="h4">Start your free trial</Fonts>
 
                 <Fonts elementType="h6" elementColor="Orange">
                     Sign in to contiune
